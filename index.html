@@ -36,7 +36,8 @@
         .box img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ensure the image covers the box */
+            object-position: center; /* Center the image */
         }
         .overlay {
             position: absolute;
@@ -78,7 +79,7 @@
     </style>
 </head>
 <body>
-<img src="./img/top.jpg" height="250" width="1500">
+<img src="./img/top.jpg" height="250" width="1500" alt="Top Image">
 <div class="container">
     <div class="box" role="button" onclick="window.location.href='./day1/day1.html'">
         <img src="./img/day1.png" alt="Day 1">
@@ -88,12 +89,12 @@
         <img src="./img/day2.jpg" alt="Day 2">
         <div class="overlay">DAY 2</div>
     </div>
-<div class="box" role="button" onclick="window.location.href='./day3/day3.html'">
-        <img src="./img/day3.png" alt="Day 7">
+    <div class="box" role="button" onclick="window.location.href='./day3/day3.html'">
+        <img src="./img/day3.png" alt="Day 3">
         <div class="overlay">DAY 3</div>
     </div>
     <div class="box" role="button" onclick="window.location.href='./day4/day4.html'">
-        <img src="./img/day3.png" alt="Day 3">
+        <img src="./img/day4.png" alt="Day 4">
         <div class="overlay">DAY 4</div>
     </div>
     <div class="box" role="button" onclick="window.location.href='./day5/day5.html'">
@@ -105,7 +106,7 @@
         <div class="overlay">DAY 6</div>
     </div>
     <div class="box" role="button" onclick="window.location.href='./day7/day7.html'">
-        <img src="./img/day7.png" alt="Day 3">
+        <img src="./img/day7.png" alt="Day 7">
         <div class="overlay">DAY 7</div>
     </div>
     <div class="box" role="button" onclick="window.location.href='./day8/day8.html'">
@@ -144,12 +145,10 @@
         <img src="./img/day16.png" alt="Day 16">
         <div class="overlay">DAY 16</div>
     </div>
-<div class="box" role="button" onclick="window.location.href='./day16/day16.html'">
-        <img src="./img/day 17.png" alt="Day 16">
+    <div class="box" role="button" onclick="window.location.href='./day17/day17.html'">
+        <img src="./img/day17.png" alt="Day 17">
         <div class="overlay">DAY 17</div>
     </div>
-
 </div>
-
 </body>
 </html>
