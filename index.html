@@ -5,40 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDG ACET GenAI</title>
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #eaeaea;
-            padding: 20px; /* Add padding for body */
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        /* Header Image */
+        .header-image {
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Grid Container */
         .container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Four columns */
-            gap: 20px; /* Space between boxes */
-            max-width: 1200px; /* Limit max width */
-            margin: 0 auto; /* Center the container */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
         }
+
+        /* Box Styling */
         .box {
             position: relative;
-            height: 300px; /* Fixed height for consistency */
+            height: 300px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
+
         .box:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
+
+        /* Image Styling */
         .box img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure the image covers the box */
-            object-position: center; /* Center the image */
+            object-fit: cover;
+            object-position: center;
+            transition: opacity 0.3s;
         }
+
+        /* Overlay Styling */
         .overlay {
             position: absolute;
             top: 0;
@@ -49,106 +89,113 @@
             justify-content: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            color: #fff;
             font-size: 24px;
+            font-weight: bold;
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .box:hover .overlay {
             opacity: 1;
         }
 
-        /* Responsive adjustments */
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .box {
-                height: 200px; /* Adjust height on smaller screens */
+                height: 200px;
             }
             .overlay {
-                font-size: 18px; /* Smaller text size */
-            }
-            .container {
-                grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+                font-size: 18px;
             }
         }
 
         @media (max-width: 480px) {
+            .header-image {
+                margin-top: 20px;
+            }
             .container {
-                grid-template-columns: 1fr; /* One column on extra small screens */
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-<img src="./img/top.jpg"  width="100%" style="aspect-ratio: 16/3;"  alt="Top Image">
-<div class="container">
-    <div class="box" role="button" onclick="window.location.href='./day1/day1.html'">
-        <img src="./img/day1.png" alt="Day 1">
-        <div class="overlay">DAY 1</div>
+    <!-- Header Image -->
+    <div class="header-image">
+        <img src="./img/top.jpg" alt="Top Image">
     </div>
-    <div class="box" role="button" onclick="window.location.href='./day2/day2.html'">
-        <img src="./img/day2.jpg" alt="Day 2">
-        <div class="overlay">DAY 2</div>
+
+    <!-- Grid Container -->
+    <div class="container">
+        <div class="box" role="button" onclick="window.location.href='./day1/day1.html'">
+            <img src="./img/day1.png" alt="Day 1">
+            <div class="overlay">DAY 1</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day2/day2.html'">
+            <img src="./img/day2.jpg" alt="Day 2">
+            <div class="overlay">DAY 2</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day3/day3.html'">
+            <img src="./img/day3.png" alt="Day 3">
+            <div class="overlay">DAY 3</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day4/day4.html'">
+            <img src="./img/day4.png" alt="Day 4">
+            <div class="overlay">DAY 4</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day5/day5.html'">
+            <img src="./img/day5.png" alt="Day 5">
+            <div class="overlay">DAY 5</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day6/day6.html'">
+            <img src="./img/day6.png" alt="Day 6">
+            <div class="overlay">DAY 6</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day7/day7.html'">
+            <img src="./img/day7.png" alt="Day 7">
+            <div class="overlay">DAY 7</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day8/day8.html'">
+            <img src="./img/day8.png" alt="Day 8">
+            <div class="overlay">DAY 8</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day9/day9.html'">
+            <img src="./img/day9.png" alt="Day 9">
+            <div class="overlay">DAY 9</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day10/day10.html'">
+            <img src="./img/day10.png" alt="Day 10">
+            <div class="overlay">DAY 10</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day11/day11.html'">
+            <img src="./img/day11.png" alt="Day 11">
+            <div class="overlay">DAY 11</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day12/day12.html'">
+            <img src="./img/day12.png" alt="Day 12">
+            <div class="overlay">DAY 12</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day13/day13.html'">
+            <img src="./img/day13.png" alt="Day 13">
+            <div class="overlay">DAY 13</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day14/day14.html'">
+            <img src="./img/day14.jpg" alt="Day 14">
+            <div class="overlay">DAY 14</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day15/day15.html'">
+            <img src="./img/day15.jpg" alt="Day 15">
+            <div class="overlay">DAY 15</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day16/day16.html'">
+            <img src="./img/day16.png" alt="Day 16">
+            <div class="overlay">DAY 16</div>
+        </div>
+        <div class="box" role="button" onclick="window.location.href='./day17/day17.html'">
+            <img src="./img/day17.png" alt="Day 17">
+            <div class="overlay">DAY 17</div>
+        </div>
     </div>
-    <div class="box" role="button" onclick="window.location.href='./day3/day3.html'">
-        <img src="./img/day3.png" alt="Day 3">
-        <div class="overlay">DAY 3</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day4/day4.html'">
-        <img src="./img/day3.png" alt="Day 4">
-        <div class="overlay">DAY 4</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day5/day5.html'">
-        <img src="./img/day5.png" alt="Day 5">
-        <div class="overlay">DAY 5</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day6/day6.html'">
-        <img src="./img/day6.png" alt="Day 6">
-        <div class="overlay">DAY 6</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day7/day7.html'">
-        <img src="./img/day7.png" alt="Day 7">
-        <div class="overlay">DAY 7</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day8/day8.html'">
-        <img src="./img/day8.png" alt="Day 8">
-        <div class="overlay">DAY 8</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day9/day9.html'">
-        <img src="./img/day9.png" alt="Day 9">
-        <div class="overlay">DAY 9</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day10/day10.html'">
-        <img src="./img/day10.png" alt="Day 10">
-        <div class="overlay">DAY 10</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day11/day11.html'">
-        <img src="./img/day11.png" alt="Day 11">
-        <div class="overlay">DAY 11</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day12/day12.html'">
-        <img src="./img/day12.png" alt="Day 12">
-        <div class="overlay">DAY 12</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day13/day13.html'">
-        <img src="./img/day13.png" alt="Day 13">
-        <div class="overlay">DAY 13</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day14/day14.html'">
-        <img src="./img/day14.jpg" alt="Day 14">
-        <div class="overlay">DAY 14</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day15/day15.html'">
-        <img src="./img/day15.jpg" alt="Day 15">
-        <div class="overlay">DAY 15</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day16/day16.html'">
-        <img src="./img/day16.png" alt="Day 16">
-        <div class="overlay">DAY 16</div>
-    </div>
-    <div class="box" role="button" onclick="window.location.href='./day17/day17.html'">
-        <img src="./img/day 17.png" alt="Day 17">
-        <div class="overlay">DAY 17</div>
-    </div>
-</div>
 </body>
 </html>
