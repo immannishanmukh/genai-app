@@ -11,12 +11,14 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
-            margin: 0; /* Remove default margin */
+            margin: 0;
         }
         .container {
-            display: flex; /* Change to flexbox for horizontal alignment */
-            flex-wrap: nowrap; /* Prevent wrapping to keep all boxes in one line */
-            gap: 40px; /* Space between boxes */
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+            justify-content: center; /* Center content within the container */
+            gap: 20px; /* Reduce gap for a more compact look */
+            max-width: 1200px; /* Set a maximum width to avoid excessive stretching */
         }
         .box {
             position: relative;
@@ -57,10 +59,25 @@
         }
 
         /* Responsive design */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .box {
+                width: 200px;
+                height: 200px; /* Adjust box size for smaller screens */
+            }
+            .overlay {
+                font-size: 20px; /* Reduce font size */
+            }
+        }
+        @media (max-width: 480px) {
             .container {
-                flex-direction: column; /* Stack boxes vertically on small screens */
-                align-items: center; /* Center items in the column */
+                gap: 15px;
+            }
+            .box {
+                width: 150px;
+                height: 150px; /* Further reduce box size on small screens */
+            }
+            .overlay {
+                font-size: 16px; /* Further reduce font size */
             }
         }
     </style>
@@ -100,6 +117,5 @@
             <div class="overlay">LAB 8</div>
         </div>
     </div>
-
 </body>
 </html>
